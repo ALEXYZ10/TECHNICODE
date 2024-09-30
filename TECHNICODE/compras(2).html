@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>TECHNICODE</title>
+    <link rel="stylesheet" href="estiles.css">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="imagen/logot.jpg" alt="Logotipo de TECHNICODE" class="logo">
+            <h1><a href="catàlogo.html">TECHNICODE</a></h1>
+        </div>
+        <div class="search-container">
+            <input type="text" placeholder="Buscar por nombre de celular" id="search-bar">
+            <button id="search-button">Buscar</button>
+        </div>
+        <nav>
+            <ul>
+                <li>
+                    <a href="catàlogo.html">Celulares</a>
+                    <ul class="dropdown">
+                        <li><a href="celulares-samsung.html">Samsung</a></li>
+                        <li><a href="celulares-iphone.html">Iphone</a></li>
+                        <li><a href="celulares-huawei.html">Huawei</a></li>
+                        <li><a href="celulares-motorola.html">Motorola</a></li>
+                        <li><a href="celulares-xiaomi.html">Xiaomi</a></li>
+                        <li><a href="celulares-honor.html">Honor</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="accesorioscel.html">Accesorios</a>
+                    <ul class="dropdown">
+                        <li><a href="audifo.html">Audìfonos</a></li>
+                        <li><a href="parlantes.html">Parlantes</a></li>
+                        <li><a href="cargador.html">Cargadores</a></li>
+                        <li><a href="cargadorportatil.html">Cargadores Portatiles</a></li>
+                        <li><a href="smartwatch.html">Smart Watch</a></li>
+                        <li><a href="smartband.html">Smart Band</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="computo.html">Còmputo</a>
+                    <ul class="dropdown">
+                        <li><a href="tablets.html">Tablets</a></li>
+                        <li><a href="monitores.html">Monitores</a></li>
+                        <li><a href="teclados.html">Teclados</a></li>
+                        <li><a href="routers.html">Routers</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="smarthome.html">Smart Home</a>
+                    <ul class="dropdown">
+                        <li><a href="televisores.html">Televisores</a></li>
+                        <li><a href="accesorioshogar.html">Accesorios Para el Hogar</a></li>
+                        <li><a href="masejeador.html">Masajeadores</a></li>
+                        <li><a href="ecoflow.html">Ecoflow</a></li>
+                        <li><a href="ecovas.html">Ecovacs</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+<div class="container">
+    <h2>Dirección de Envío</h2>
+
+    <form action="#" method="post">
+        <div class="form-group">
+            <label for="direccion">Dirección (Especificar N° calle, Mz., Lt., Bloque, Interior, Dpto.):</label>
+            <input type="text" id="direccion" name="direccion" placeholder="Dirección" required>
+        </div>
+
+        <div class="form-group">
+            <label for="referencia">Referencia:</label>
+            <input type="text" id="referencia" name="referencia" placeholder="Datos adicionales o referencia a su dirección de envío" required>
+        </div>
+
+        <div class="form-group">
+            <label for="pais">País:</label>
+            <select id="pais" name="pais" required>
+                <option value="">Seleccionar</option>
+                <option value="Perú">Perú</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="departamento">Departamento:</label>
+            <select id="departamento" name="departamento" required>
+                <option value="">Por favor selecciona un departamento</option>
+                </select>
+        </div>
+
+        <div class="form-group">
+            <label for="provincia">Provincia:</label>
+            <select id="provincia" name="provincia" required>
+                <option value="">Por favor selecciona una provincia</option>
+                </select>
+        </div>
+
+        <div class="form-group">
+            <label for="distrito">Distrito:</label>
+            <select id="distrito" name="distrito" required>
+                <option value="">Por favor selecciona un distrito</option>
+                </select>
+        </div>
+
+        <button type="button" id="generarUbicacion">Generar Ubicación en Mapa</button>
+
+        <div class="form-group">
+            <label for="telefono">Número de teléfono:</label>
+            <input type="tel" id="telefono" name="telefono" placeholder="Número de teléfono" required>
+        </div>
+
+        <h2>Método de envío</h2>
+
+        <div class="form-group">
+            <input type="radio" id="delivery" name="envio" value="delivery" checked>
+            <label for="delivery">S/ 0.00 Delivery gratis por compra mayor a S/ 299.00</label>
+        </div>
+
+        <button type="submit"><a href="compras(3).html">Siguiente</a></button>
+    </form>
+</div>
+</section>
+<section class="contact-section">
+    <h1>¡NUESTROS CANALES!</h1>
+    <div class="contact-container">
+      <div class="contact-box chat-box">
+        <h2>CHAT</h2>
+        <p>Converse en línea con un ejecutivo de TECHNICODE</p>
+        <p>Lunes a Viernes 9:00 am a 6:00 pm</p>
+        <p>Sábados y Domingos 9:00 am a 1:00 pm</p>
+        <p>Servicio chat de Atención al Cliente</p>
+      </div>
+      <div class="contact-box whatsapp-box">
+        <h2>WHATSAPP</h2>
+        <p>Contacte con un ejecutivo de TECHNICODE al (922 170 416)</p>
+        <p>en los siguientes horarios de atención:</p>
+        <p>Lunes a viernes 09:00 am a 06:00pm</p>
+        <p>Sábados y Domingos 09:00 am a 02:00 pm</p>
+      </div>
+      <div class="contact-box email-box">
+        <h2>EMAIL</h2>
+        <p>Envíe un correo a servicio al cliente Technicode@gmail.com</p>
+        <p>Un representante de TECHNICODE se comunicará  dentro de las próximas</p>
+        <p>24 horas hábiles.</p>
+        <p>Nuestros horarios de atención son :</p>
+        <p>Lunes a Viernes 9:00 am  a 6:00 pm</p>
+        <p>Sábado y Domingo 9:00 am a 2:00 pm</p>
+      </div>
+    </div>
+  </section>
+  <div class="info-container">
+    <div class="info-block">
+      <h3>Sobre Nosotros</h3>
+      <ul>
+        <li><a href="pie-sobrenosotros.html">Nosotros</a></li>
+        <li><a href="pie-formasdepago.html">Formas de pago</a></li>
+        <li><a href="pie-formasdeenvio.html">Formas de envío</a></li>
+      </ul>
+    </div>
+    <div class="info-block">
+      <h3>Atención al cliente</h3>
+      <ul>
+        <li><a href="pie-contactenos.html">Contáctenos</a></li>
+        <li><a href="reclamaciones.html">Libro de Reclamaciones</a></li>
+      </ul>
+    </div>
+    <div class="info-block">
+      <h3>Políticas de la empresa</h3>
+      <ul>
+        <li>Política de AseguraTec</li>
+                            <li><a href="pie-politicadegarantia.html">Política de garantía</a></li>
+                            <li><a href="pie-politicadedevolucionocambio.html">Política de devolución o cambio</a></li>
+                            <li>Política de privacidad</li>
+                            <li>Términos y condiciones</li>
+                            <li>Legales</li>
+      </ul>
+    </div>
+    <div class="info-block">
+      <h3>Horario de atención al Cliente y Ventas Whatsapp:</h3>
+      <ul>
+        <li>Lun a Vie: 9:00 am a 6:00 pm</li>
+        <li>Sáb y Dom de 9:00 am a 2:00 pm</li>
+      </ul>
+    </div>
+  </div>
+<footer>
+<p>&copy; 2024 TECHNICODE</p>
+</footer>
+</body>
+</html>
