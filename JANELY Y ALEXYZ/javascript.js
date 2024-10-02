@@ -14,3 +14,13 @@ formulario.addEventListener('submit', (e) => {
     }
   });
   
+  const fechaVencimiento = document.getElementById('fechaVencimiento');
+
+  fechaVencimiento.addEventListener('input', () => {
+    const fechaActual = new Date();
+    const fechaSeleccionada = new Date(fechaVencimiento.value);
+    
+    if (fechaSeleccionada < fechaActual) {
+      alert('La fecha de vencimiento debe ser en el futuro');
+    }
+  });
