@@ -62,7 +62,7 @@
     </nav>
   </header>
   <div class="container"> 
-    <form id="formulario" method="post">
+    <form id="formulario-reclamaciones-2" method="post">
       <h2>Datos del Apoderado</h2>
       <div class="form-group">
         <input type="checkbox" id="menorEdad" name="menorEdad">
@@ -175,6 +175,11 @@
 <footer>
 <p>&copy; 2024 TECHNICODE</p>
 </footer>
-  <script src="script.js"></script>
+  <script>
+  document.getElementById('formulario-reclamaciones-2').addEventListener('submit', function(event) {
+    event.preventDefault();
+    alert('Formulario enviado con éxito!');
+  });
+</script>
 </body>
 </html>
