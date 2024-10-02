@@ -17,6 +17,7 @@ document.getElementById('formulario-reclamaciones-2').addEventListener('submit',
     'pedido',
   ];
   const errores = validarCamposRequeridos(camposRequeridos);
+  
   if (errores.length > 0) {
     alert(errores.join('\n'));
   } else {
@@ -24,6 +25,7 @@ document.getElementById('formulario-reclamaciones-2').addEventListener('submit',
     const telefono = document.getElementById('telefono').value;
     const numeroBoleta = document.getElementById('numeroBoleta').value;
     const detallesReclamo = document.getElementById('detallesReclamo').value;
+    
     if (!validarCorreo(correoElectronico)) {
       alert('Correo electrónico inválido');
     } else if (!validarTelefono(telefono)) {
@@ -40,7 +42,9 @@ document.getElementById('formulario-reclamaciones-2').addEventListener('submit',
         detallesReclamo: document.getElementById('detallesReclamo').value,
         pedido: document.getElementById('pedido').value,
       };
+      
       localStorage.setItem('datosReclamacion', JSON.stringify(datosReclamacion));
+      
       fetch('/api/reclamaciones', {
         method: 'POST',
         headers: {
@@ -48,9 +52,23 @@ document.getElementById('formulario-reclamaciones-2').addEventListener('submit',
         },
         body: JSON.stringify(datosReclamacion),
       })
-        .then((response) => response.json())
-        .then((data) => console.log(data))
-        .catch((error) => console.error(error));
+      .then((response) => response.json())
+      .then((data) => {
+        console.log('Formulario enviado con éxito');
+        setTimeout(() => {
+          alert('Formulario enviado con éxito!');
+          document.getElementById('mensaje-exito').innerHTML = 'Formulario enviado con éxito!';
+          document.getElementById('mensaje-exito').style.display = 'block';
+        }, 1000);
+      })
+      .catch((error) => {
+        console.error(error);
+        setTimeout(() => {
+          alert('Error al enviar formulario: ' + error.message);
+          document.getElementById('mensaje-error').innerHTML = 'Error al enviar formulario: ' + error.message;
+          document.getElementById('mensaje-error').style.display = 'block';
+        }, 1000);
+      });
     }
   }
 });
