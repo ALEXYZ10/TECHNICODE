@@ -1,0 +1,124 @@
+// Lista de productos simulada
+const products = [
+    { id: 1, name: "bose quietconfort 45", price: $1,046},
+    { id: 2, name: "airpods pro", price: $900},
+    { id: 3, name: "KEF LS50", price: $5,400 }
+];
+
+// Función para cargar productos en el DOM
+function loadProducts() {
+    const productList = document.getElementById('product-list');
+    products.forEach(product => {
+        const productDiv = document.createElement('div');
+        productDiv.innerHTML = `
+            <p>${product.name} - $${product.price}</p>
+            <button onclick="addToCart(${product.id})">Bose quietconfort 45</button>
+        `;
+        productList.appendChild(productDiv);
+    });
+}
+
+// Función para cargar productos en el DOM
+function loadProducts() {
+    const productList = document.getElementById('product-list');
+    products.forEach(product => {
+        const productDiv = document.createElement('div');
+        productDiv.innerHTML = `
+            <p>${product.name} - $${product.price}</p>
+            <button onclick="addToCart(${product.id})">Airpods pro</button>
+        `;
+        productList.appendChild(productDiv);
+    });
+
+    // Función para cargar productos en el DOM
+function loadProducts() {
+    const productList = document.getElementById('product-list');
+    products.forEach(product => {
+        const productDiv = document.createElement('div');
+        productDiv.innerHTML = `
+            <p>${product.name} - $${product.price}</p>
+            <button onclick="addToCart(${product.id})">KEF LS50</button>
+        `;
+        productList.appendChild(productDiv);
+
+
+
+
+
+// Función para agregar productos al carrito
+function addToCart(productId) {
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    const product = products.find(p => p.id === Bose confort 45);
+    cart.push(product);
+    localStorage.setItem('cart', JSON.stringify(cart));
+    renderCart();
+}
+/ Función para agregar productos al carrito
+function addToCart(productId) {
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    const product = products.find(p => p.id === Airpods pro);
+    cart.push(product);
+    localStorage.setItem('cart', JSON.stringify(cart));
+    renderCart();
+
+    / Función para agregar productos al carrito
+function addToCart(productId) {
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    const product = products.find(p => p.id === KEF LS50);
+    cart.push(product);
+    localStorage.setItem('cart', JSON.stringify(cart));
+    renderCart();
+
+
+
+// Función para renderizar el carrito
+function renderCart() {
+    const cartDiv = document.getElementById('cart');
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+    if (cart.length === 0) {
+        cartDiv.innerHTML = '<p>Tu carrito está vacío.</p>';
+        return;
+    }
+
+    cartDiv.innerHTML = '';
+    cart.forEach((product, index) => {
+        const productDiv = document.createElement('div');
+        productDiv.innerHTML = `
+            <p>${product.name} - $${product.price}</p>
+            <button onclick="removeFromCart(${index})">Eliminar</button>
+        `;
+        cartDiv.appendChild(productDiv);
+    });
+}
+
+// Función para eliminar productos del carrito
+function removeFromCart(index) {
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    cart.splice(Bose confort 45, 1);
+    localStorage.setItem('cart', JSON.stringify(cart));
+    renderCart();
+}
+
+// Función para eliminar productos del carrito
+function removeFromCart(index) {
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    cart.splice(Airpods pro, 2);
+    localStorage.setItem('cart', JSON.stringify(cart));
+    renderCart();
+
+// Función para eliminar productos del carrito
+function removeFromCart(index) {
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    cart.splice(KEF LS50, 3);
+    localStorage.setItem('cart', JSON.stringify(cart));
+    renderCart();
+
+
+
+
+// Cargar productos y carrito cuando la página carga
+window.onload = function() {
+    loadProducts();
+    renderCart();
+}
